@@ -1,0 +1,99 @@
+ART_OBJECT
+    Id_n (unique)
+    Artist
+    Year 
+    Title
+    Description
+    Origin 
+    Epoch 
+
+    PAINTING
+        Paint_type 
+        Drawn_on 
+        Style 
+
+    SCULPTURE
+        Material 
+        Height
+        Weight
+        Style
+
+    STATUE
+
+    OTHER 
+        Type 
+
+
+    PERMANENT_COLLECTION 
+        Date_acquired
+        Status 
+        Cost
+
+    BORROWED
+        Collection
+        Date_borrowed
+        Date_returned
+        
+        COLLECTIONS 
+            Name (unique)
+            Type 
+            Description
+            Address
+            Phone
+            Contact_person
+
+ARTIST 
+    Name (unique)
+    DateBorn 
+    Date_died
+    Country_of_origin
+    Epoch
+    Main_style
+    Description
+
+EXHIBITIONS 
+    Name (unique)
+    Start_date
+    End_date
+
+NOTE: ADD USERS!!
+USERS:
+    ADMINS
+    DATA_ENTRY
+    END_USER
+
+Goal:
+Create an application for the museum to help manage their arts database and events such as exhibitions.
+
+1. Manage art objects
+    a. Add art pieces to the database
+    Every animal can have different properties based on type but some properties are the
+    same for example (Name, sex, age, RFID).
+    b. Search art pieces and exhibitions.
+2. User Management
+    a. Add users
+    b. Access control
+    * access control using sql commands: this requires the creation of roles and users 
+    for the database from the sql scrip as shown in the video posted on D2L. the project
+    requirement is to manage user access through the application, meaning that you can
+    always log in as root and just show the interface corresponding to the prompt 
+    selections, which would not prevent a guest from dropping a table if they knew how 
+    to inject scripts. for the bonus the login will be using multiple credentials with 
+    different access levels as shown in the video recording which will prevent any 
+    undesired behaviour by the user. this is worth up to 3% project bonus
+    c. Manage users (such as block and suspend)
+
+Consider the following user requirements and functionalities:
+    * All the users must log in to the application.
+
+Admins
+    • Can add users.
+    • Can edit users.
+    • Can block users.
+    • Can make changes to database (modify tables attributes and constraints)
+Data entry users
+    • Can add information tuples to the database as long as the information being added meets the database constraints
+    • Can modify existing information in the database
+End user
+    • Can lookup information in the database (ideally a remote user on a website that browses the offerings of the
+    museum, but we will have it simulated as part of the main program).
