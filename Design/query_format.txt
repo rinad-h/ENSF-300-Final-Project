@@ -1,0 +1,11 @@
+
+    2. A basic retrieval query
+    3. A retrieval query with ordered results
+    4. A nested retrieval query
+    5. A retrieval query using joined tables
+    6. An update operation with any necessary triggers
+    7. A deletion operation with any necessary triggers
+        *points 6 and 7 of query code: expected to use the referential trigger 
+        actions would be sufficient to meet the requirement, if you implement a 
+        full custom trigger for one of the tables this will account for 3% each
+        (total 6% if you do 6 and 7) project bonus
